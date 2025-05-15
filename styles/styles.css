@@ -1,0 +1,376 @@
+/* ============================================================
+   SISTEMA DE DISEÑO - LETRAS AMIGAS
+   ============================================================ */
+
+/* ----------- Variables de Color ----------- */
+:root {
+  --rosa-claro: #F8BBD0;
+  --naranja: #FFA726;
+  --celeste: #B3E5FC;
+  --azul-oscuro: #004080;
+  --azul-medio: #1976D2;
+  --anaranjado-suave: #FFCC80;
+  --rojo-coral: #FF6F61;
+}
+
+/* ============================================================
+   ESTRUCTURA GLOBAL
+   ============================================================ */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+main {
+  flex: 1;
+  padding: 0;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+header {
+  background-color: var(--azul-oscuro);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.logo {
+  width: 150px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+footer {
+  background-color: var(--azul-medio);
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  color: white;
+}
+
+/* ============================================================
+   BOTONES
+   ============================================================ */
+
+.boton {
+  background-color: var(--rojo-coral);
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.boton:hover {
+  background-color: var(--anaranjado-suave);
+}
+
+.boton.descarga {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: var(--naranja);
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.boton.descarga:hover {
+  background-color: var(--anaranjado-suave);
+}
+
+/* ============================================================
+   BANNER PRINCIPAL
+   ============================================================ */
+
+.banner-principal {
+  background-color: var(--azul-medio);
+  color: white;
+  width: 100%;
+  min-height: 60vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 40px 20px;
+}
+
+.banner-contenido {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.banner-imagen img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.banner-texto {
+  flex: 1;
+  text-align: left;
+}
+
+.banner-texto h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.banner-texto p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* === RESPONSIVE BANNER === */
+@media (max-width: 768px) {
+  .banner-contenido {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .banner-imagen img {
+    width: 180px;
+    margin: 10px 0;
+  }
+
+  .banner-texto h1 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+
+  .banner-texto p {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0 10px;
+  }
+
+  .boton.descarga {
+    font-size: 0.9rem;
+    padding: 10px 18px;
+  }
+}
+
+/* ============================================================
+   SECCIÓN LETRAS AMIGAS (destacada con fondo celeste)
+   ============================================================ */
+
+.letras-amigas {
+  max-width: 900px;
+  margin: 30px auto;
+  background-color: var(--celeste);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.letras-amigas h2,
+.letras-amigas h3 {
+  color: var(--azul-oscuro);
+  margin-top: 0;
+}
+
+.letras-amigas ul {
+  padding-left: 20px;
+}
+
+.letras-amigas li {
+  list-style: '✔️ ';
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .letras-amigas {
+    margin: 20px 15px;
+    padding: 20px;
+  }
+}
+
+/* ============================================================
+   ESTILOS SOLO PARA PÁGINA: ¿QUÉ ES LA DISLEXIA?
+   ============================================================ */
+
+/* SECCIÓN: ¿Qué es la dislexia? */
+.que-es {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
+  margin: 40px auto;
+  box-sizing: border-box;
+}
+
+.que-es h1 {
+  font-size: 2rem;
+  color: var(--naranja);
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 3px solid var(--naranja);
+  padding-bottom: 10px;
+}
+
+/* SECCIÓN: Síntomas */
+.sintomas {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.sintomas h1 {
+  color: var(--naranja);
+  font-size: 1.8rem;
+  text-align: center;
+  border-bottom: 2px solid var(--naranja);
+  padding-bottom: 8px;
+}
+
+.sintomas h2 {
+  color: var(--azul-medio);
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.sintomas ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.sintomas ul li {
+  margin-bottom: 10px;
+  list-style: '🔹 ';
+}
+
+/* SECCIÓN: Mitos */
+.mitos {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.mitos h1 {
+  color: var(--naranja);
+  font-size: 1.8rem;
+  text-align: center;
+  border-bottom: 2px solid var(--naranja);
+  padding-bottom: 8px;
+}
+
+.mitos ul li {
+  background-color: var(--celeste);
+  border-left: 5px solid var(--azul-oscuro);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  list-style: none;
+  line-height: 1.6;
+}
+
+/* SECCIÓN: Estrategias */
+.estrategias {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.estrategias h1 {
+  color: var(--naranja);
+  font-size: 1.8rem;
+  text-align: center;
+  border-bottom: 2px solid var(--naranja);
+  padding-bottom: 8px;
+}
+
+.estrategias h2 {
+  color: var(--azul-medio);
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.estrategias ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.estrategias ul li {
+  list-style: '✔️ ';
+  margin-bottom: 8px;
+}
+
+/* RESPONSIVE: solo para secciones informativas */
+@media (max-width: 768px) {
+  .que-es,
+  .sintomas,
+  .mitos,
+  .estrategias {
+    margin: 20px 15px;
+    padding: 20px;
+  }
+
+  .que-es h1,
+  .sintomas h1,
+  .mitos h1,
+  .estrategias h1 {
+    font-size: 1.5rem;
+  }
+
+  .sintomas h2,
+  .estrategias h2 {
+    font-size: 1.1rem;
+  }
+
+  .sintomas ul li,
+  .estrategias ul li,
+  .mitos ul li {
+    font-size: 0.95rem;
+  }
+}
